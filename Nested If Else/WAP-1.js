@@ -1,4 +1,4 @@
-// WAP to check the age by using the nested if else Javascript.
+// WAP to check the age by using the nested if else in Javascript.
 
 // Declaration of variable.
 let age;
