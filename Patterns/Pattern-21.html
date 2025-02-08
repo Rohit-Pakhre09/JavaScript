@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-21</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Pattern-21.
+
+        // A
+        // A B
+        // A B C
+        // A B C D
+        // A B C D E
+
+        for (let a = 65; a <= 69; a++) {
+            for (let b = 65; b <= a; b++) {
+                document.write(String.fromCharCode(b) + " ");
+            }
+
+            // Line Break.
+            document.write("<br>");
+        }
+
+    </script>
+
+</body>
+
+</html>

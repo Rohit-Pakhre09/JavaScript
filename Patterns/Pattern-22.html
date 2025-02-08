@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-22</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Pattern-22.
+
+        // A
+        // B C
+        // D E F
+        // G H I J
+        // K L M N O
+
+        let count = 65;
+
+        for (let a = 65; a <= 69; a++) {
+            for (let b = 65; b <= a; b++) {
+                document.write(String.fromCharCode(count) + " ");
+                count++;
+            }
+
+            // Line Break.
+            document.write("<br>");
+        }
+
+    </script>
+
+</body>
+
+</html>
