@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-16</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-16.
+
+        // A B C D E
+        //   B C D E
+        //     C D E
+        //       D E
+        //         E
+
+        for (let a = 65; a <= 69; a++) {
+
+            // Space
+            for (let c = 65; c < a; c++) {
+                document.write("&nbsp; &nbsp;" + " ");
+            }
+
+            for (let b = a; b <= 69; b++) {
+                document.write(String.fromCharCode(b) + " ");
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
