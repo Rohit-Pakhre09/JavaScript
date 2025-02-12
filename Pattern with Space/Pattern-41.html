@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-41</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-41.
+
+        // *       *
+        // * *   * *
+        // *   *   *
+        // *       *
+        // *       *
+        // *       *
+        // *       *
+
+        for (let a = 1; a <= 7; a++) {
+
+            for (let b = 1; b <= 5; b++) {
+
+                if (((a == 1) && (b >= 2 && b <= 4)) || ((a == 2) && (b == 3)) || ((a == 3) && (b == 2 || b == 4)) || ((a == 4 || a == 5 || a == 6 || a == 7) && (b >= 2 && b <= 4))) {
+                    document.write("&nbsp; &nbsp;");
+                } else {
+                    document.write("* ");
+                }
+
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
