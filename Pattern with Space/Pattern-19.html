@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-19</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-19.
+
+        // 1 0 1 0 1
+        //   0 1 0 1
+        //     1 0 1
+        //       0 1
+        //         1
+
+        for (let a = 1; a <= 5; a++) {
+
+            // Space
+            for (let c = 1; c < a; c++) {
+                document.write("&nbsp; &nbsp;");
+            }
+
+            for (let b = a; b <= 5; b++) {
+                if (b % 2 == 0) {
+                    document.write("0" + " ");
+                } else {
+                    document.write("1" + " ");
+                }
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
