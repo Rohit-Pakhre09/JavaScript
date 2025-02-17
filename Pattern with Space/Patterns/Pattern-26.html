@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-26</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-26.
+
+        // 1 2 3 4 5 5 4 3 2 1
+        // 1 2 3 4     4 3 2 1
+        // 1 2 3         3 2 1
+        // 1 2             2 1
+        // 1                 1
+        // 1 2             2 1
+        // 1 2 3         3 2 1
+        // 1 2 3 4     4 3 2 1
+        // 1 2 3 4 5 5 4 3 2 1
+
+        // Upper Pattern.
+        for (let a = 5; a >= 2; a--) {
+
+            for (let b = 1; b <= a; b++) {
+                document.write(b + " ");
+            }
+
+            // Between Space.
+            for (let d = a; d < 5; d++) {
+                document.write("&nbsp; &nbsp;&nbsp; &nbsp;");
+            }
+
+            for (let c = a; c >= 1; c--) {
+                document.write(c + " ");
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+        // Lower Pattern.
+        for (let a = 1; a <= 5; a++) {
+
+            for (let b = 1; b <= a; b++) {
+                document.write(b + " ");
+            }
+
+            // Between Space.
+            for (let d = a; d < 5; d++) {
+                document.write("&nbsp; &nbsp;&nbsp; &nbsp;");
+            }
+
+            for (let c = a; c >= 1; c--) {
+                document.write(c + " ");
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

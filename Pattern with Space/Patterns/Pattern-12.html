@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-12</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-12.
+
+        //          *
+        //        * *
+        //      * * *
+        //    * * * *   
+        //  * * * * *        
+
+        for (let a = 1; a <= 5; a++) {
+
+            // Space
+            for (let c = a; c < 5; c++) {
+                document.write("&nbsp; &nbsp;");
+            }
+
+            for (let b = 1; b <= a; b++) {
+                document.write("* ");
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
