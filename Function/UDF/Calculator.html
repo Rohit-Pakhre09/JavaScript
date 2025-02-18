@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Addition.
+        function add(first_number, second_number) {
+            document.write(`Addition : ${first_number} + ${second_number} = ${(first_number + second_number)}`);
+        }
+
+        // Subtraction.
+        function sub(first_number, second_number) {
+            document.write(`Subtraction : ${first_number} - ${second_number} = ${(first_number - second_number)}`);
+        }
+
+        // Division.
+        function mult(first_number, second_number) {
+            document.write(`Division : ${first_number} x ${second_number} = ${(first_number * second_number)}`);
+        }
+
+        // Multiply.
+        function div(first_number, second_number) {
+            document.write(`Multiplication : ${first_number} ÷ ${second_number} = ${(first_number / second_number)}`);
+        }
+
+        // Declaration of variable.
+        let first_number, second_number, choice;
+
+        // User Prompt.
+        first_number = prompt("Enter FIrst Number:");
+        second_number = prompt("Enter Second Number:");
+
+        // Number Conversion.
+        first_number = parseInt(first_number);
+        second_number = parseInt(second_number);
+
+        choice = prompt("Choose your choice (+, - ,* ,/):");
+
+        switch (choice) {
+
+            case "+": add(first_number, second_number)
+                break;
+
+            case "-": sub(first_number, second_number)
+                break;
+
+            case "/": div(first_number, second_number)
+                break;
+
+            case "*": mult(first_number, second_number)
+                break;
+
+            default: document.write("Please choose the Choice from these option (+, -, *, /)");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
