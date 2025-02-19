@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern-54</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP of Pattern-53.
+
+        // * * * * * * *
+        //           *
+        //         *
+        //       *
+        //     *
+        //   *
+        // * * * * * * *
+
+
+        for (let a = 1; a <= 7; a++) {
+
+            for (let b = 1; b <= 7; b++) {
+
+                if (((a == 2) && ((b >= 1 && b < 6) || b == 7)) || ((a == 3) && ((b >= 1 && b < 5) || b == 6 || b == 7)) || ((a == 4) && ((b >= 1 && b <= 3) || (b >= 5 && b <= 7))) || ((a == 5 && ((b >= 1 && b <= 2) || (b >= 4 && b <= 7)))) | ((a == 6) && ((b == 1) || (b >= 3 && b <= 7)))) {
+                    document.write("&nbsp; &nbsp;");
+                } else {
+                    document.write("* ");
+                }
+
+            }
+
+            // Line-Break.
+            document.write("<br>");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
