@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- Main CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon CSS -->
+    <link rel="icon" href="https://img.icons8.com/?size=48&id=9IDMhoQZOWdR&format=png">
+
+    <!-- Particle Js Library  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <p>FORM</p>
+
+            <input type="hidden" name="access_key" value="2e2778c1-15a4-4941-b83b-f4217a048785">
+
+            <input type="text" name="name" required placeholder="Your Name">
+            <input type="tel" name="tel" required maxlength="10" placeholder="Phone no.">
+            <input type="email" name="email" required placeholder="E-mail">
+            <textarea name="message" required rows="7" placeholder="Your Suggestion"></textarea>
+
+            <button>Submit</button>
+
+        </form>
+
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 100,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": { "value": "#ffffff" },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": { "width": 0, "color": "#000000" }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1.5,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 140,
+                            "line_linked": { "opacity": 1 }
+                        },
+                        "repulse": {
+                            "distance": 100,
+                            "duration": 0.4
+                        },
+                        "push": { "particles_nb": 4 },
+                        "remove": { "particles_nb": 2 }
+                    }
+                },
+                "retina_detect": true
+            });
+
+            document.addEventListener("mousemove", function (event) {
+                let particles = window.pJSDom[0].pJS.particles.array;
+                particles.forEach(p => {
+                    let dx = p.x - event.clientX;
+                    let dy = p.y - event.clientY;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        let influence = 0.05;
+                        p.vx += (event.movementX * influence);
+                        p.vy += (event.movementY * influence);
+
+                        let maxSpeed = 2;
+                        p.vx = Math.max(-maxSpeed, Math.min(p.vx, maxSpeed));
+                        p.vy = Math.max(-maxSpeed, Math.min(p.vy, maxSpeed));
+                    }
+                });
+            });
+
+            setInterval(() => {
+                let particles = window.pJSDom[0].pJS.particles.array;
+                particles.forEach(p => {
+                    p.vx *= 1;
+                    p.vy *= 0.95;
+                });
+            }, 30);
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
