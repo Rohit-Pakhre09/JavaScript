@@ -1,4 +1,4 @@
-// WAP to take two variable and perform their Mathematical Operation with user input.
+ to take two variable and perform their Mathematical Operation with user input.
 
 // Declaration of Variable.
 let a, b;
