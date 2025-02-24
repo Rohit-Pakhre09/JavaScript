@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP for a simple calculator.
+
+        let operator = prompt('Enter operator ( either +, -, * or / ): ');
+
+        let numb1 = parseFloat(prompt('Enter first number: '));
+        let numb2 = parseFloat(prompt('Enter second number: '));
+
+        let result;
+        if (operator == '+') {
+            result = numb1 + numb2;
+        }
+        else if (operator == '-') {
+            result = numb1 - numb2;
+        }
+        else if (operator == '*') {
+            result = numb1 * numb2;
+        }
+        else {
+            result = numb1 / numb2;
+        }
+
+        document.write(`${numb1} ${operator} ${numb2} = ${result}`);
+
+    </script>
+
+</body>
+
+</html>
