@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 to n Table by Function</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Function.
+        function table(n) {
+            document.write(`<div style="display: inline-block; margin-right: 20px; margin-bottom: 20px; border: 1px solid black; padding: 10px;">`);
+            document.write(`<strong>Table of ${n}<br><br></strong>`);
+
+            // Loop for 1 to n.
+            for (let a = 1; a <= 10; a++) {
+                document.write(`<div>${n} x ${a} = ${n * a}</div>`);
+            }
+
+            document.write(`</div>`);
+        }
+
+        // User Input
+        let n = prompt("Enter any number: ");
+
+        // Number Conversion
+        n = parseInt(n);
+
+        // Number increment loop
+        let c = 1;
+        while (c <= n) {
+            table(c);
+            c++;
+        }
+
+    </script>
+
+</body>
+
+</html>
