@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 to N Sum</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP to do 1 to N sum by using function recursion.
+
+        function sum(n) {
+
+            // Recursion.
+            return (n != 0) ? (n + sum(n - 1)) : 0;
+        }
+
+        let n = parseInt(prompt("Enter any number :"));
+        let result = sum(n);
+
+        document.write(`Sum of ${n}: ${result}`);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 to N</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP to print 1 to N by using recursion.
+
+        function numbers(n, start = 1) {
+
+            if (start <= n) {
+
+                document.write(`${start}, `);
+                numbers(n, start + 1)
+            }
+
+        }
+
+        let n = parseInt(prompt("Enter any number:"));
+        numbers(n);
+
+    </script>
+
+</body>
+
+</html>
