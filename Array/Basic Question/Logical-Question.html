@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Door Concept</title>
+</head>
+
+<body>
+
+    <script>
+
+        // // [50 doors - closed at starting]
+        // 5 people have the master key of all doors.
+
+        // 1 -> 1 table -> 1,2,3,4,5,6,7,8,9,10
+        // 2 -> 2 table -> 2,4,6,8,10,12,14,16,18,20
+        // 3 -> 3 table -> 3,6,9,12,15,18,21....
+        // 4 ->
+        // 5 ->
+
+        // ? count : open = ? , closed = ?
+
+        let doors = [];
+
+        for (let i = 1; i <= 50; i++) {
+            doors.push(i)
+        }
+
+        let opened = 0, closed = 0;
+        let table_1, table_2, table_3, table_4, table_5;
+        for (let i = 0; i < 51; i++) {
+
+            if (doors[i] % 1 == 0) {
+                document.write(doors[i] + ", ");
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
