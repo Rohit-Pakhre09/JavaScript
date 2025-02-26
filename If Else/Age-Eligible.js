@@ -1,4 +1,4 @@
-check the age for the eligibility for the voting .
+// WAP to check the age for the eligibility for the voting .
 
 // Declaration of variable.
 let age;
