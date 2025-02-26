@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Same Last Number</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP to Check if the Numbers Have Same Last Digit.
+
+        let a = prompt('Enter any first integer number : ');
+        let b = prompt('Enter any second integer number : ');
+        let c = prompt('Enter any third integer number : ');
+
+        let result1 = a % 10;
+        let result2 = b % 10;
+        let result3 = c % 10;
+
+        if (result1 == result2 && result1 == result3) {
+            document.write(`${a}, ${b} and ${c} having the same last digit.`);
+        }
+        else {
+            document.write(`${a}, ${b} and ${c} having different last digit.`);
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting of Alphabetical</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP to Sort Words in Alphabetical Order
+
+        let string = prompt('Enter a sentence: ');
+        let words = string.split(' ');
+
+        // Sorting the array elements.
+        words.sort();
+
+        document.write('The sorted words are:');
+
+        for (const element of words) {
+            document.write(element + " ");
+        }
+
+    </script>
+
+</body>
+
+</html>
