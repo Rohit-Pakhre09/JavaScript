@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+
+<body>
+
+    <script>
+
+        // WAP to check if the word is palindrome or not.
+
+        function checkPalindrome(word) {
+
+            let arrayValues = word.split('');
+
+            let reverseArrayValues = arrayValues.reverse();
+
+
+            let reverseWord = reverseArrayValues.join('');
+
+            if (word == reverseWord) {
+                document.write(`${word} is a palindrome`);
+            }
+            else {
+                document.write(`${word} is not a palindrome`);
+            }
+        }
+
+        //take input
+        let word = prompt('Enter any word: ');
+
+        checkPalindrome(word);
+
+    </script>
+
+</body>
+
+</html>
