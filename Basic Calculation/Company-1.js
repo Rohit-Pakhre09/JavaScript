@@ -1,4 +1,4 @@
-// WAP to hire an employee with following situation :-
+ to hire an employee with following situation :-
 
 // Requirement :-
 // Company 1 : Student, Internship, Fresher, experience.
