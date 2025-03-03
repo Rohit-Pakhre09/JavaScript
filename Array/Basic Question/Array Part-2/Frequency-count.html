@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Count</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Count frequency of all character/element in string/array.
+        let userInput = prompt("Enter any string: ");
+
+        let string = [], count = 0;
+        for (let i = 0; i < userInput.length; i++) {
+            string.push(userInput[i]);
+        }
+
+        for (let i = 0; i < string.length; i++) {
+            count++;
+        }
+
+        document.write(`${string} having ${count} frequency/element.`);
+
+    </script>
+
+</body>
+
+</html>
