@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Doors Concept</title>
+</head>
+
+<body>
+
+    <script>
+        function calculateClosedCount() {
+            const rows = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                [2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+                [3, 6, 9, 12, 15, 18, 21, 24, 27, 30],
+                [4, 8, 12, 16, 20, 24, 28, 32, 36, 40],
+                [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],
+            ];
+
+            let closed = 0;
+            let opened = 0;
+            const initialState = Array(50).fill(true); // true = open, false = closed.
+
+            // Initial state: all open
+            opened = initialState.filter(val => val).length; //all are open so it is 50.
+
+            // Table 1
+            for (let num of rows[0]) {
+                initialState[num - 1] = !initialState[num - 1]; // Toggle
+            }
+            closed = initialState.filter(val => !val).length;
+            opened = initialState.filter(val => val).length;
+
+            console.log("Table 1: Closed:", closed, "Opened:", opened);
+
+            // Table 2
+            let closedTable2 = 0;
+            let openTable2 = 0;
+            for (let num of rows[1]) {
+                initialState[num - 1] = !initialState[num - 1]; // Toggle
+            }
+
+            closed = initialState.filter(val => !val).length;
+            opened = initialState.filter(val => val).length;
+
+            console.log("Table 2: Closed:", closed, "Opened:", opened);
+
+            // Table 3
+            for (let num of rows[2]) {
+                initialState[num - 1] = !initialState[num - 1]; // Toggle
+            }
+            closed = initialState.filter(val => !val).length;
+            opened = initialState.filter(val => val).length;
+            console.log("Table 3: Closed:", closed, "Opened:", opened);
+
+            // Table 4
+            for (let num of rows[3]) {
+                initialState[num - 1] = !initialState[num - 1]; // Toggle
+            }
+            closed = initialState.filter(val => !val).length;
+            opened = initialState.filter(val => val).length;
+            console.log("Table 4: Closed:", closed, "Opened:", opened);
+
+            // Table 5
+            for (let num of rows[4]) {
+                initialState[num - 1] = !initialState[num - 1]; // Toggle
+            }
+            closed = initialState.filter(val => !val).length;
+            opened = initialState.filter(val => val).length;
+            console.log("Table 5: Closed:", closed, "Opened:", opened);
+
+            return { closed, opened };
+        }
+
+        const result = calculateClosedCount();
+        console.log("Final Closed:", result.closed);
+        console.log("Final Opened:", result.opened);
+    </script>
+
+</body>
+
+</html>
