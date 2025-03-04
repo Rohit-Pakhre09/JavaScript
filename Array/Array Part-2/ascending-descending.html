@@ -4,24 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ascending and Descending Number</title>
+    <title>Ascending and Descending order</title>
 </head>
 
 <body>
 
     <script>
+        let userInput = prompt("Enter any number separated by space: ").split(' ');
 
-        let userInput = prompt("Enter any number/string: ").split(' ');
-
-        let sorting = [];
+        let numbers = [];
         for (let i = 0; i < userInput.length; i++) {
-            sorting.push(userInput[i]);
+            numbers.push(parseInt(userInput[i]));
         }
 
-        let ascending = sorting.sort();
-        let descending = sorting.sort().reverse();
+        for (let i = 0; i < numbers.length; i++) {
+            for (let j = 0; j < numbers.length; j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    let temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+        document.write("Ascending Order: " + numbers);
+
+        let descending = numbers;
+        for (let i = 0; i < descending.length; i++) {
+            for (let j = 0; j < descending.length; j++) {
+                if (descending[j] < descending[j + 1]) {
+                    let temp = descending[j];
+                    descending[j] = descending[j + 1];
+                    descending[j + 1] = temp;
+                }
+            }
+        }
+        document.write("<br>Descending Order: " + descending);
 
     </script>
+
 
 </body>
 
