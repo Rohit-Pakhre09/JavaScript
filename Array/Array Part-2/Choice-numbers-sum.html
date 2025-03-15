@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <script>
+
+        let arr = prompt('Enter any numbers separated by spaces : ').split(' ').map(Number);
+        let ask = parseInt(prompt('Enter a number from which you want the sum of 2 numbers: '));
+
+        let met = false;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if ((arr[i] + arr[j]) === ask) {
+                    document.write(`The Sum : ${arr[i]} + ${arr[j]} = ${ask}`);
+                    met = true;
+                }
+            }
+        }
+
+        if (!met) {
+            document.write(`There is no such number from which the sum of 2 numbers can return ${ask} number`);
+        }
+
+    </script>
+
+</body>
+
+</ht
