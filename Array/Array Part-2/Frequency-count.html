@@ -11,21 +11,22 @@
 
     <script>
 
-        // Count frequency of unique characters in a string.
+        // Count frequency of all character/element in string/array.
         let userInput = prompt("Enter any string: ");
 
-        let repeated = [];
-        let countArr = [];
-
-        for (let char of userInput) {
-            if (!repeated.includes(char)) {
-                repeated.push(char); 
-                let count = userInput.split(char).length - 1; 
-                countArr.push(`${char}: ${count}`);
-            }
+        let string = [], count = 1;
+        for (let i = 0; i < userInput.length; i++) {
+            string.push(userInput[i]);
         }
 
-        document.write(countArr.join('<br>'));
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] == string[i + 1]) {
+                count--;
+            }
+            count++;
+            document.write(`${string[i]} = Appears ${count} times`);
+        }
+
 
     </script>
 
