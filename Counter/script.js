@@ -6,7 +6,7 @@ const button3 = document.getElementById('btn3');
 const button4 = document.getElementById('btn4');
 const button5 = document.getElementById('btn5');
 let counter = 0;
-let reset = counter;
+let reset = "";
 
 button1.addEventListener('click', () => {
     counter++;
@@ -41,5 +41,6 @@ button4.addEventListener('click', () => {
 });
 
 button5.addEventListener('click', () => {
-    number.innerHTML = reset
+    counter = 0;
+    number.innerHTML = counter;
 });
