@@ -1,7 +1,11 @@
 const display = document.getElementById('display');
 
 function appendToDisplay(input) {
-    display.value += input;
+    if (input === '%') {
+        display.value = (parseFloat(display.value) / 100).toString();
+    } else {
+        display.value += input;
+    }
 }
 
 function reset() {
