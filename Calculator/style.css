@@ -53,6 +53,11 @@ button {
     cursor: pointer;
 }
 
+button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
 button:hover {
     background-color: #9e9797;
 }
