@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="'en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <!-- Main CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/11213/11213125.png">
+
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <p>Sign Up</p>
+
+        <form>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            <button type="button" id="btn">Submit</button>
+            <p id="guide_msg"></p>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
