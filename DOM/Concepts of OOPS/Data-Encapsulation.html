@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Encapsulation</title>
+</head>
+
+<body>
+    <script>
+
+        // Wap to create a class for employee with attributes like id ,name,salary and role, set all attributes and get for atleast 3 objects/employee.
+
+        class Employee {
+            id;
+            name;
+            salary;
+            role;
+
+            set(id, name, salary, role) {
+                this.id = id;
+                this.name = name;
+                this.salary = salary;
+                this.role = role;
+            }
+
+            get() {
+                document.write(`ID: ${this.id}, Name: ${this.name}, Salary: ${this.salary}, Role: ${this.role}<br>`);
+            }
+        };
+
+        const emp1 = new Employee();
+        emp1.set(1, ' Rohit ', 50000, ' Head ');
+        emp1.get();
+
+        const emp2 = new Employee();
+        emp2.set(2, ' Roshan ', 50000, ' Head ');
+        emp2.get();
+
+        const emp3 = new Employee();
+        emp3.set(3, ' Nishanr ', 50000, ' Head ');
+        emp3.get();
+
+    </script>
+</body>
+
+</html>
