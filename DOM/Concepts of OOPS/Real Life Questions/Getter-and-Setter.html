@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Student {
+            constructor(percentage) {
+                this.property = percentage;
+            }
+
+            get grade() {
+                if (this.property >= 91 && this.property <= 100) {
+                    return `Grade is A+`;
+                } else if (this.property >= 81 && this.property <= 90) {
+                    return `Grade is A`;
+                } else if (this.property >= 71 && this.property <= 80) {
+                    return `Grade is B+`;
+                } else if (this.property >= 65 && this.property <= 70) {
+                    return `Grade is B`;
+                } else if (this.property >= 60 && this.property <= 64) {
+                    return `Grade is C`;
+                } else if (this.property >= 50 && this.property <= 59) {
+                    return `Grade is D`;
+                } else if (this.property >= 33 && this.property <= 49) {
+                    return `Grade is E`;
+                } else {
+                    return `Grade is F`;
+                }
+            }
+
+            set percentage(value) {
+                if (value >= 1 && value <= 100) {
+                    this.property = value;
+                } else {
+                    document.write(`Invalid Percentage (Between 1 to 100).<br>`);
+                }
+            }
+
+            result() {
+                return `The Percentage: ${this.property}% | ${this.grade}`;
+            }
+        }
+
+        const student = new Student();
+        student.percentage = 90;
+
+        document.write(student.result());
+
+
+    </script>
+
+</body>
+
+</html>
