@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstracting</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Car {
+            startEngine() {
+                throw new Error("startEngine() must be implemented by subclasses");
+            }
+        };
+
+        class PetrolCar extends Car {
+            startEngine() {
+                document.write(`The engine is getting started by Petrol Car.<br>`);
+            }
+        };
+
+        class ElectricCar extends Car {
+            startEngine() {
+                document.write(`The engine is getting started by Electric Car.<br>`);
+            }
+        };
+
+        try {
+            const car = new Car();
+            car.startEngine();
+        } catch (error) {
+            console.error(error.message);
+        }
+
+        const petrol = new PetrolCar();
+        const electric = new ElectricCar();
+
+        petrol.startEngine();
+        electric.startEngine();
+
+
+    </script>
+
+</body>
+
+</html>
