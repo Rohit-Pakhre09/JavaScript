@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor and Object Creation</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Restaurant {
+            constructor(name, cuisineType, rating) {
+                this.name = name;
+                this.cuisineType = cuisineType;
+                this.rating = rating;
+            }
+
+            result() {
+                document.write(`Name of Restaurant: ${this.name}<br>Type of Cuisine: ${this.cuisineType}<br>Rating: ${this.rating}<br><br>`);
+            };
+        }
+
+        const resto1 = new Restaurant("Tasty Bites", "Italian", 4.5);
+        const resto2 = new Restaurant("Spice Hub", "Indian", 4.8);
+        const resto3 = new Restaurant("Sushi World", "Japanese", 4.7);
+
+        resto1.result();
+        resto2.result();
+        resto3.result();
+
+    </script>
+
+</body>
+
+</html>
