@@ -19,29 +19,29 @@
                     document.write("Negative amount value is not valid.");
                 }
                 this.#balance = balance;
-                this.statement(`Account Balance: ${this.#balance}`);
+                document.write(`Account Balance: ${this.#balance}<br>`);
             }
 
             deposit(amount) {
                 if (amount => 0) {
                     this.#balance += amount;
-                    this.statement(`Deposited: ${amount}`);
+                    document.write(`Deposited: ${amount}<br>`);
                 } else {
-                    console.log("Deposit amount value must be positive.");
+                    console.log("Deposit amount value must be positive.<br>");
                 }
             }
 
             withdraw(amount) {
                 if (amount => 0 && amount <= this.#balance) {
                     this.#balance -= amount;
-                    this.statement(`Withdrawn: ${amount}`);
+                    document.write(`Withdrawn: ${amount}`);
                 } else {
-                    console.log("Invalid withdrawal amount or insufficient balance.");
+                    document.write("Invalid withdrawal amount or insufficient balance.<br>");
                 }
             }
 
             getBalance() {
-                this.statement(`Current Balance in the A/C: ${this.#balance}<br>`);
+                document.write(`Current Balance in the A/C: ${this.#balance}<br>`);
             }
 
             statement(msg) {
