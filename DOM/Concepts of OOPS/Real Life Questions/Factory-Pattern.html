@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Pattern</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Car {
+            constructor(brand, year) {
+                this.brand = brand;
+                this.year = year;
+            };
+        };
+
+        class Bike {
+            constructor(brand, year) {
+                this.brand = brand;
+                this.year = year;
+            };
+        };
+
+        class VehicleFactory {
+            static createVehicle(type, brand, year) {
+                if (type.toLowerCase() === 'car') {
+                    return new Car(brand, year);
+                } else if (type.toLowerCase() === 'bike') {
+                    return new Bike(brand, year);
+                } else {
+                    document.write('Invalid Input ! write (Bike or Car).');
+                }
+            };
+        };
+
+        const myCar = VehicleFactory.createVehicle("car", "Toyota", 2023);
+        console.log(myCar);
+
+        const myBike = VehicleFactory.createVehicle("bike", "Yamaha", 2022);
+        console.log(myBike);
+
+    </script>
+
+</body>
+
+</html>
