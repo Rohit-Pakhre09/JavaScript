@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Player {
+            constructor(name) {
+                this.name = name;
+                this.inventory = [];
+                this.level = 1;
+            };
+
+            collectItmes(items) {
+                this.inventory.push(items);
+                return this;
+            };
+
+            upgradeWeapon(weapon_level) {
+                this.level += weapon_level;
+                return this;
+            };
+
+            showInventory() {
+                document.write(`${this.name} unlocked ${this.inventory} and upgraded ${this.level} level of the inventory.`);
+                return this;
+            };
+
+        };
+
+        const player = new Player('Rohit');
+        player.collectItmes('Sword').collectItmes('Bow').upgradeWeapon(5).showInventory();
+
+    </script>
+
+</body>
+
+</html>

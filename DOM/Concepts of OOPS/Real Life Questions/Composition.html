@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition (Object Inside Object - Clearer Explanation)</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Employee {
+            constructor(name, position) {
+                this.name = name;
+                this.position = position;
+            }
+        }
+
+        class Department {
+            constructor() {
+                this.employees = [];
+            }
+
+            addEmployee(name, position) {
+                let emp_ = new Employee(name, position);
+                this.employees.push(emp_);
+            }
+
+            listEmployees() {
+                return this.employees.map(emp => emp.name);
+            }
+        }
+
+        const hr = new Department();
+        hr.addEmployee("Rohit", "Manager");
+        hr.addEmployee("Rohan", "Manager");
+        document.write('Names of the Employees: ' + hr.listEmployees());
+
+    </script>
+
+</body>
+
+</html>
