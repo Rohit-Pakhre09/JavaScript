@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Payment {
+            pay(amount, currency = 'INR') {
+                document.write(`Amount Paying: ${amount}, ${currency}.<br>`);
+            }
+        };
+
+        class CreditCard extends Payment {
+            pay(amount, currency = 'INR') {
+                document.write(`Amount Paying by Credit Card: ${amount}, ${currency}..<br>`);
+            }
+        };
+
+        class PayPal extends Payment {
+            pay(amount, currency = 'INR') {
+                document.write(`Amount Paying by Pay Pal: ${amount}, ${currency}<br>`);
+            }
+        };
+
+        const credit_pay = new CreditCard();
+        credit_pay.pay(1000);
+        credit_pay.pay(1200, 'EUR');
+
+        document.write('<br>');
+
+        const payPal_pay = new PayPal();
+        payPal_pay.pay(1000);
+        payPal_pay.pay(1200, 'USD');
+
+    </script>
+
+</body>
+
+</html>
