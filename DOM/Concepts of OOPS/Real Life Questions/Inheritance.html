@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Vehicle {
+            constructor(brand, year) {
+                this.brand = brand;
+                this.year = year;
+            }
+
+            getDetails() {
+                return `Brand of Vehicle: ${this.brand}<br>Year of the Manufacture: ${this.year}`;
+            }
+        }
+
+        class Car extends Vehicle {
+            constructor(brand, year, fuelType) {
+                super(brand, year);
+                this.fuelType = fuelType;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}<br>Type of the Fuel: ${this.fuelType}`;
+            }
+        }
+
+        class Bike extends Vehicle {
+            constructor(brand, year, hasGear) {
+                super(brand, year);
+                this.hasGear = hasGear;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}<br>Having Gear: ${this.hasGear}`;
+            }
+        };
+
+        class ElectricCar extends Car {
+            constructor(brand, year, fuelType, batteryCapacity) {
+                super(brand, year, fuelType);
+                this.batteryCapacity = batteryCapacity;
+            }
+
+            getDetails() {
+                return `${super.getDetails()}<br>What is the Battery Capacity: ${this.batteryCapacity}`;
+            }
+        };
+
+        const car1 = new Vehicle("Toyota", 2020);
+        const car2 = new Car("BMW", 2022, "Petrol");
+        const bike = new Bike("Yamaha", 2021, "Yes");
+        const electricCar = new ElectricCar("Tesla", 2023, "Electric", "75 kWh");
+
+        document.write(car1.getDetails() + "<br><br>");
+        document.write(car2.getDetails() + "<br><br>");
+        document.write(bike.getDetails() + "<br><br>");
+        document.write(electricCar.getDetails() + "<br><br>");
+
+    </script>
+
+</body>
+
+</html>
