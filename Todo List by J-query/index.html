@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <!-- Main CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script Link -->
+    <script src="script.js" defer></script>
+
+    <!-- J-Query CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="https://img.icons8.com/?size=80&id=ACLAf31fuu2O&format=png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- Input Details -->
+    <div class="details-container">
+        <p id="detail-title">Todo List</p>
+        <div class="input-details">
+            <input type="text" placeholder="Add your plans..." id="input" autocomplete="off">
+            <button id="btn">+</button>
+        </div>
+        <span id="guide-msg"></span>
+        <div class="circle-icon">
+            <img src="https://img.icons8.com/?size=64&id=2N1OLDamzc2X&format=png" alt="paper-icon">
+        </div>
+    </div>
+
+    <!-- List Details -->
+    <div class="list-details">
+        <p id="task-msg">No plans created yet.</p>
+        <hr>
+        <p id="numbersList"></p>
+    </div>
+
+</body>
+
+</html>
