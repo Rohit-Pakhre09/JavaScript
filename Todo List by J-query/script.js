@@ -10,7 +10,7 @@ function addTask() {
     if ($("#numbersList").children().length === 0) {
       taskMsg.text("No Plans to do !!").css("color", "grey");
     } else {
-      taskMsg.text("Here are the planned tasks to do.").css("color", "green");
+      taskMsg.text("Here are the plans tasks to do.").css("color", "green");
     }
   }
 
